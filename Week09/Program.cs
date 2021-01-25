@@ -1,12 +1,41 @@
 ﻿using System;
 
-namespace Week09
+using System.Data.SqlClient;
+/*
+ * https://www.connectionstrings.com/microsoft-data-sqlclient/
+ */
+namespace SQLserverConnection
 {
-    class Program
+    class MainClass
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+            string ConnectionString = "Server=172.16.226.2;" +
+                "Database=AdventureWorks2017;" +
+                "Uid=Mac;" +
+                "Pwd = 1234; ";
+
+
+            string Query = "select * from Person.PhoneNumberType";
+
+            using (SqlConnection conn = new SqlConnection(ConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand(Query, conn);
+
+                conn.Open();
+
+                SqlDataReader Results = cmd.ExecuteReader();
+
+                while (Results.Read())
+                {
+                    Console.WriteLine(Results.GetInt32(0) + " " + Results.GetString(1) + " " + Results.GetDateTime(2));
+                }
+            }
+
+            
+            Console.ReadKey();
         }
+
     }
 }

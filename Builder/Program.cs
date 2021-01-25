@@ -10,14 +10,6 @@ namespace SQLserverConnection
     {
         public static void Main(string[] args)
         {
-
-            /*   string ConnectionString = "Server=172.16.226.128;Database=AdventureWorks2017;Uid=Mac;Pwd = 1234; ";
-
-
-               SqlConnection conn = new SqlConnection(ConnectionString);
-
-               /** or */
-
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder()
             {
                 InitialCatalog = "AdventureWorks2017",
@@ -25,8 +17,6 @@ namespace SQLserverConnection
                 Password = "1234",
                 DataSource = "172.16.226.128"
             };
-
-            ;
 
             string Query = "select * from Person.PhoneNumberType";
 
@@ -43,9 +33,8 @@ namespace SQLserverConnection
                     Console.WriteLine(Results.GetInt32(0) + " " + Results.GetString(1) + " " + Results.GetDateTime(2));
                 }
             }
-
+            Console.WriteLine("Hello from Builder");
             
-            Console.ReadKey();
         }
 
     }
