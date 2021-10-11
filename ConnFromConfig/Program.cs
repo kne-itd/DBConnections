@@ -36,7 +36,7 @@ namespace ConnFromConfig
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 SqlCommand cmd = new SqlCommand(Query, conn);
-                conn.Open();
+//                conn.Open();
 
                 SqlDataReader Results = cmd.ExecuteReader();
                 while (Results.Read())
