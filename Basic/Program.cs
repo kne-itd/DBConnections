@@ -19,7 +19,7 @@ namespace SQLserverConnection
             string ConnectionString = "Server=localhost;" +
                 "Database=AdventureWorks2017;" +
                 "Uid=Mac;" +
-                "Pwd = 1234; ";
+                "Pwd = 1234;";
 
 
             string Query = "select * from Person.PhoneNumberType";
