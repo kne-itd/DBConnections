@@ -11,7 +11,7 @@ namespace SQLserverConnection
         public static void Main(string[] args)
         {
 
-            string ConnectionString = "Server=172.16.226.2;" +
+            string ConnectionString = "Server=localhost;" +
                 "Database=AdventureWorks2017;" +
                 "Uid=Mac;" +
                 "Pwd = 1234; ";
