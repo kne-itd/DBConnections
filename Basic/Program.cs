@@ -16,7 +16,7 @@ namespace SQLserverConnection
             //    "Uid=Mac;" +
             //    "Pwd = 1234; ";
 
-            string ConnectionString = "Server=localhost;" +
+            string ConnectionString = "Server=kajs-MacBook-Pro.local;" +
                 "Database=AdventureWorks2017;" +
                 "Uid=Mac;" +
                 "Pwd = 1234;";
