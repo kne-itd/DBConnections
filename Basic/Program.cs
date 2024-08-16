@@ -11,8 +11,10 @@ namespace SQLserverConnection
     {
         public static void Main(string[] args)
         {
+            // IP Addresses of db server
             string HomeIP = "172.16.226.2";
             string WorkIp = "10.130.64.202";
+            // Check which network we currently are on
             string DbServerAddress = string.Empty;
             string hostName = Dns.GetHostName(); ;
             string CurrentIp = Dns.GetHostEntry(hostName).AddressList[1].ToString();
@@ -29,7 +31,8 @@ namespace SQLserverConnection
                 "Database=AdventureWorks2017;" +
                 "Uid=Mac;" +
                 "Pwd = 1234; ";
-            Console.WriteLine(ConnectionString);
+            //Console.WriteLine(ConnectionString);
+
             //string ConnectionString = "Server=Kajs-MacBook-Pro.local;" +
             //    "Database=AdventureWorks2017;" +
             //    "Uid=Mac;" +
